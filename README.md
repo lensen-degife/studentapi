@@ -158,6 +158,6 @@ You can test the API using:
 ## 👨‍💻 Author
 
 Lensen Degife
-GitHub: [https://github.com/your-username](https://github.com/lensen-degife)
+GitHub: [https://github.com/lensen-degife](https://github.com/lensen-degife)
 
 ---
