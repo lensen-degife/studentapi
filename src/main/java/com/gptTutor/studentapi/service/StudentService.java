@@ -43,5 +43,14 @@ public class StudentService {
         }
         return null;
     }
+    public String deleteStudent(int id) {
+        Student student = getStudentById(id);
+
+        if(student != null){
+            students.remove(student);
+            return "student deleted successfully";
+        }
+        return "Student not found";
+    }
 
 }

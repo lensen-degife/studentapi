@@ -2,6 +2,7 @@ package com.gptTutor.studentapi.controller;
 
 import com.gptTutor.studentapi.model.Student;
 import com.gptTutor.studentapi.service.StudentService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,6 +38,16 @@ public class StudentController {
     public Student updateStudent(@PathVariable int id, @RequestBody Student student){
 
         return studentService.updateStudent(id, student);
+    }
+    @DeleteMapping("/students/{id}")
+//    public String deleteStudent(@PathVariable int id){
+//        return studentService.deleteStudent(id);
+//    }
+    public ResponseEntity<String> deleteStudent(
+            @PathVariable int id
+    ) {
+        String response = studentService.deleteStudent(id);
+        return ResponseEntity.ok(response);
     }
 
 
