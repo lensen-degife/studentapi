@@ -39,7 +39,7 @@ public class CourseService {
        return null;
     }
 
-    private Courses getCourseById(int id) {
+    public Courses getCourseById(int id) {
        return courses.stream()
                .filter(c -> c.getCourseId() ==id)
                .findFirst()

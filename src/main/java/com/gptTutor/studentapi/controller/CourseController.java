@@ -2,10 +2,7 @@ package com.gptTutor.studentapi.controller;
 
 import com.gptTutor.studentapi.model.Courses;
 import com.gptTutor.studentapi.service.CourseService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,11 @@ public class CourseController {
     @PostMapping("/courses")
     public Courses addCourse(@RequestBody Courses courses){
         return courseService.addCourse(courses);
+    }
+
+    @GetMapping("/courses/{id}")
+    public Courses getCourseById(@PathVariable int id){
+        return courseService.getCourseById(id);
     }
 
 }
