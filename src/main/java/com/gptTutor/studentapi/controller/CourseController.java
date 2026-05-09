@@ -29,4 +29,8 @@ public class CourseController {
         return courseService.getCourseById(id);
     }
 
+    @PutMapping("/courses/{id}")
+    public Courses updateCourse(@PathVariable int id, @RequestBody Courses courses){
+        return courseService.updateCourses(id, courses);
+    }
 }
