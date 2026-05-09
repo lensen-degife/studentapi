@@ -31,6 +31,7 @@ public class CourseController {
 
     @PutMapping("/courses/{id}")
     public Courses updateCourse(@PathVariable int id, @RequestBody Courses courses){
+        System.out.println("Is it working?");
         return courseService.updateCourses(id, courses);
     }
 }
