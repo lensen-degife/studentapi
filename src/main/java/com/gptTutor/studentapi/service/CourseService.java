@@ -46,4 +46,13 @@ public class CourseService {
                .findFirst()
                .orElse(null);
     }
+    public String deleteCourse(int id){
+       Courses courses1 = getCourseById(id);
+
+       if (courses1 != null){
+           courses.remove(courses1);
+           return "successfully deleted";
+       }
+       return "course not found";
+    }
 }
