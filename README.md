@@ -157,7 +157,7 @@ You can test the API using:
 
 ## 👨‍💻 Author
 
-Your Name
+Lensen Degife
 GitHub: [https://github.com/your-username](https://github.com/lensen-degife)
 
 ---
