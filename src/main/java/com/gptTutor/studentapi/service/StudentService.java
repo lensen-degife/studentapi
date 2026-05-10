@@ -3,8 +3,6 @@ package com.gptTutor.studentapi.service;
 import com.gptTutor.studentapi.model.Student;
 import com.gptTutor.studentapi.repository.StudentRepo;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
