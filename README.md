@@ -13,6 +13,11 @@ A simple RESTful API for managing student records built using **Spring Boot**. T
 * Retrieve student by ID
 * Update student details
 * Delete student
+* Create a new course
+* Retrieve all courses
+* Retrieve course by ID
+* Update course details
+* Delete course
 * RESTful architecture
 * Clean layered structure (Controller, Service, Repository)
 
@@ -25,7 +30,7 @@ A simple RESTful API for managing student records built using **Spring Boot**. T
 * Spring Web
 * Spring Data JPA
 * Hibernate
-* H2 Database (or MySQL/PostgreSQL)
+* H2 Database 
 * Maven
 
 ---
@@ -138,7 +143,7 @@ DELETE /api/students/{id}
 ## 🧪 Testing Tools
 
 You can test the API using:
-*Insomnia(I used this)
+* Insomnia(I used this)
 * Postman
 * cURL
 * Swagger (if added)
