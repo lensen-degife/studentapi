@@ -138,7 +138,7 @@ DELETE /api/students/{id}
 ## 🧪 Testing Tools
 
 You can test the API using:
-
+*Insomnia(I used this)
 * Postman
 * cURL
 * Swagger (if added)
