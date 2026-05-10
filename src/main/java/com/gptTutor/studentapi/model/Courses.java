@@ -1,9 +1,19 @@
 package com.gptTutor.studentapi.model;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Courses {
 
+    @Id
     private int courseId;
     private String courseName;
+
+    public Courses() {
+
+    }
 
     public int getCourseId() {
         return courseId;
