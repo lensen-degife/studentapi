@@ -1,6 +1,7 @@
 package com.gptTutor.studentapi.service;
 
 import com.gptTutor.studentapi.model.Student;
+import com.gptTutor.studentapi.repository.StudentRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,48 +10,43 @@ import java.util.List;
 @Service
 public class StudentService {
 
-    private final List<Student> students = new ArrayList<>();
-    public StudentService() {
-        students.add(  new Student(1, "Abel", "Spring boot"));
-        students.add( new Student(2, "Sara", "React"));
-        students.add(new Student(3, "John", "Python"));
-    }
+    StudentRepo repo;
+
     public List<Student> getStudents(){
 
-        return students;
+        return repo.findAll();
 
     }
 
     public Student getStudentById( int id) {
-        return students.stream()
-                .filter(s -> s.getId() ==id)
-                .findFirst()
-                .orElse(null);
+      return repo.findById(id).orElse(new Student());
 
     }
 
     public Student addStudent(Student student){
-        students.add(student);
-        return student;
+        return repo.save(student);
     }
 
     public Student updateStudent(int id, Student updatedStudent){
-        Student existing = getStudentById(id);
-        if (existing != null){
-            existing.setName(updatedStudent.getName());
-            existing.setCourse(updatedStudent.getCourse());
-            return existing;
-        }
-        return null;
+//        Student existing = getStudentById(id);
+//        if (existing != null){
+//            existing.setName(updatedStudent.getName());
+//            existing.setCourse(updatedStudent.getCourse());
+//            return existing;
+//        }
+//        return null;
+        return repo.save(updatedStudent);
     }
     public String deleteStudent(int id) {
-        Student student = getStudentById(id);
-
-        if(student != null){
-            students.remove(student);
-            return "student deleted successfully";
-        }
-        return "Student not found";
+//        Student student = getStudentById(id);
+//
+//        if(student != null){
+//            students.remove(student);
+//            return "student deleted successfully";
+//        }
+//        return "Student not found";
+         repo.deleteById(id);
+         return "successfully deleted";
     }
 
 }
