@@ -2,12 +2,14 @@ package com.gptTutor.studentapi.service;
 
 import com.gptTutor.studentapi.model.Student;
 import com.gptTutor.studentapi.repository.StudentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class StudentService {
 
+    @Autowired
     StudentRepo repo;
 
     public List<Student> getStudents(){
